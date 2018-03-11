@@ -1,4 +1,4 @@
-package home;
+package menu;
 
 import home.Main;
 import javafx.fxml.Initializable;

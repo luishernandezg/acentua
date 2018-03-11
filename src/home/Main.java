@@ -9,9 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sun.rmi.runtime.Log;
+import menu.MenuView;
 
 import java.io.InputStream;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,7 +46,7 @@ public class Main extends Application {
      void gotoMenu() {
         try {
             MenuView menu =
-                    (MenuView) replaceSceneContent("menu.fxml");
+                    (MenuView) replaceSceneContent("/menu/menu.fxml");
             menu.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
@@ -56,6 +58,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader();
         InputStream in = Main.class.getResourceAsStream(fxml);
         loader.setBuilderFactory(new JavaFXBuilderFactory());
+        loader.setResources(ResourceBundle.getBundle("resources.strings", new Locale("es","")));
         loader.setLocation(Main.class.getResource(fxml));
         AnchorPane page;
 
@@ -64,7 +67,7 @@ public class Main extends Application {
         } finally {
             in.close();
         }
-        root.getChildren().removeAll();
+        root.getChildren().clear();
         root.getChildren().addAll(page);
         System.out.println("PASO");
         return (Initializable)loader.getController();
