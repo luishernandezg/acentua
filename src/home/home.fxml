@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="home.HomeView">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/img/lapiz_2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="219.0" layoutY="200.0" text="¡ Acentúa !" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto Medium" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="260.0" prefHeight="53.0" prefWidth="505.0" text="Bienvenido a Acentúa, un juego donde aprenderás las reglas de acentuación y te divertirás mientras lo haces."
+             textAlignment="CENTER" wrapText="true"
+             AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <font>
+            <Font name="Roboto Medium" size="12.0" />
+         </font></Label>
+      <Button layoutX="248.0" layoutY="334.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0"
+              text="CONTINUAR" wrapText="true" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="248.0" onAction="#gotoMenu">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
