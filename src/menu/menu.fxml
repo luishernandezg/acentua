@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuView">
+<AnchorPane fx:id="menuAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuView">
    <children>
-      <Button layoutX="234.0" layoutY="91.0" mnemonicParsing="false" text="JUEGO NUEVO">
-         <font>
-            <Font name="Roboto Medium" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="248.0" layoutY="135.0" mnemonicParsing="false" text="TOTORIAL">
-         <font>
-            <Font name="Roboto Medium" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="204.0" layoutY="186.0" mnemonicParsing="false" text="REGLAS DE ACENTUACIÓN">
-         <font>
-            <Font name="Roboto Medium" size="14.0" />
-         </font>
-      </Button>
-      <Label layoutX="219.0" layoutY="26.0" text="¡ Acentúa !">
+      <Label layoutX="240.0" layoutY="29.0" text="¡ Acentúa !">
          <font>
             <Font name="Roboto Medium" size="34.0" />
          </font>
       </Label>
+      <VBox alignment="TOP_CENTER" layoutX="210.0" layoutY="89.0" prefHeight="200.0" prefWidth="221.0" spacing="20.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="JUEGO NUEVO">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" text="TOTORIAL">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="menuBtnGotoRule" mnemonicParsing="false" onAction="#gotoRules" text="REGLAS DE ACENTUACIÓN">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
    </children>
 </AnchorPane>

@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import menu.MenuView;
+import rules.RuleAgudasView;
 
 import java.io.InputStream;
 import java.util.Locale;
@@ -48,6 +49,16 @@ public class Main extends Application {
             MenuView menu =
                     (MenuView) replaceSceneContent("/menu/menu.fxml");
             menu.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void gotoRuleAguda() {
+        try {
+            RuleAgudasView ruleAgudasView =
+                    (RuleAgudasView) replaceSceneContent("/rules/rule_agudas.fxml");
+            ruleAgudasView.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
         }
