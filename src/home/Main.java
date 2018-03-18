@@ -11,6 +11,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import menu.MenuView;
 import rules.RuleAgudasView;
+import rules.RuleEsdrujulasView;
+import rules.RuleGrabesView;
 
 import java.io.InputStream;
 import java.util.Locale;
@@ -44,7 +46,7 @@ public class Main extends Application {
         }
     }
 
-     void gotoMenu() {
+     public void gotoMenu() {
         try {
             MenuView menu =
                     (MenuView) replaceSceneContent("/menu/menu.fxml");
@@ -63,6 +65,27 @@ public class Main extends Application {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    public void gotoRuleGrabes() {
+        try {
+            RuleGrabesView ruleGrabesView =
+                    (RuleGrabesView) replaceSceneContent("/rules/rule_grabes.fxml");
+            ruleGrabesView.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void gotoRuleEsdrujulas() {
+        try {
+            RuleEsdrujulasView ruleEsdrujulasView =
+                    (RuleEsdrujulasView) replaceSceneContent("/rules/rule_esdrujulas.fxml");
+            ruleEsdrujulasView.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 
 
     private Initializable replaceSceneContent(String fxml) throws Exception {
