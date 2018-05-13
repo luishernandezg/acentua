@@ -28,4 +28,13 @@ public class MenuView extends AnchorPane implements Initializable {
     public void gotoRules(ActionEvent actionEvent) {
         this.application.gotoRuleAguda();
     }
+
+    public void gotoLevelOne(ActionEvent actionEvent){
+        this.application.gotoLevelOne();
+    }
+
+
+    public void gotoAbout(ActionEvent actionEvent) {
+        application.gotoAbout();
+    }
 }

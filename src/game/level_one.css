@@ -1,0 +1,12 @@
+#pointPanel{
+    -fx-background-color: royalblue;
+}
+
+.button{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-color: whitesmoke;
+    -fx-border-color: dimgrey;
+    -fx-font-family: "Roboto Medium";
+    -fx-font-size: 14;
+}

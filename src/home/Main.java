@@ -1,5 +1,7 @@
 package home;
 
+import about.AboutView;
+import game.LevelOneView;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,6 +25,8 @@ import java.util.logging.Logger;
 public class Main extends Application {
 
     private Group root = new Group();
+    public int game_number = 0;
+    public int victory_number = 0;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -56,6 +60,16 @@ public class Main extends Application {
         }
     }
 
+    public void gotoAbout() {
+        try {
+            AboutView about =
+                    (AboutView) replaceSceneContent("/about/about.fxml");
+            about.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     public void gotoRuleAguda() {
         try {
             RuleAgudasView ruleAgudasView =
@@ -81,6 +95,16 @@ public class Main extends Application {
             RuleEsdrujulasView ruleEsdrujulasView =
                     (RuleEsdrujulasView) replaceSceneContent("/rules/rule_esdrujulas.fxml");
             ruleEsdrujulasView.setApp(this);
+        } catch (Exception ex) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void gotoLevelOne() {
+        try {
+            LevelOneView levelOneView =
+                    (LevelOneView) replaceSceneContent("/game/level_one.fxml");
+            levelOneView.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
         }
