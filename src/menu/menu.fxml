@@ -9,7 +9,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="menuAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuView">
+<?import java.net.URL?>
+<AnchorPane fx:id="menuAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="menu.MenuView" stylesheets="menu.css">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
          <image>
@@ -43,4 +44,7 @@
          </opaqueInsets>
       </VBox>
    </children>
+   <stylesheets>
+      <URL value="@menu.css" />
+   </stylesheets>
 </AnchorPane>

@@ -9,7 +9,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rules.RuleAgudasView">
+<?import java.net.URL?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rules.RuleAgudasView" stylesheets="rule.css">
    <children>
       <Label fx:id="lblTitle" layoutX="233.0" layoutY="14.0">
          <font>
@@ -95,4 +96,8 @@
          </font>
       </Button>
    </children>
+   <stylesheets>
+      <URL value="@rule.css" />
+   </stylesheets>
+
 </AnchorPane>

@@ -21,12 +21,12 @@
                   <Font name="Roboto Medium" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="negativePointText" layoutX="122.0" layoutY="21.0" prefHeight="30.0" prefWidth="55.0" text="Fallos:" textFill="#ff4343">
+            <Label fx:id="negativePointText" layoutX="122.0" layoutY="21.0" prefHeight="30.0" prefWidth="55.0" text="Fallos:" textFill="#c20a0a">
                <font>
                   <Font name="Roboto Medium" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="negativePointNumber" layoutX="181.0" layoutY="21.0" prefHeight="30.0" prefWidth="40.0" text="0/2" textFill="#ff4343">
+            <Label fx:id="negativePointNumber" layoutX="181.0" layoutY="21.0" prefHeight="30.0" prefWidth="40.0" text="0/2" textFill="#c20a0a">
                <font>
                   <Font name="Roboto Medium" size="18.0" />
                </font>

@@ -1,6 +1,7 @@
 package about;
 
 import home.Main;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 
@@ -18,5 +19,9 @@ public class AboutView extends AnchorPane implements Initializable {
 
     public void setApp(Main application){
         this.application = application;
+    }
+
+    public void gotoMenu(ActionEvent actionEvent) {
+        application.gotoMenu();
     }
 }
