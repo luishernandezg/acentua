@@ -8,6 +8,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import model.Word;
 
@@ -104,7 +106,12 @@ public class LevelOneView extends AnchorPane implements Initializable,LevelOneCo
 
     @Override
     public void showVictoryAlert() {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Ganaste, ¿ Quieres iniciar un nuevo juego ?", ButtonType.YES, ButtonType.NO);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "¿ Quieres iniciar un nuevo juego ?", ButtonType.YES, ButtonType.NO);
+        alert.setTitle("¡Ganaste!");
+        alert.setHeaderText("¡Felicitaciones Ganaste!");
+        Image image = new Image(getClass().getResource("/resources/img/feliz.jpg").toExternalForm());
+        ImageView imageView = new ImageView(image);
+        alert.setGraphic(imageView);
         alert.showAndWait();
         application.game_number++;
         application.victory_number++;
@@ -122,7 +129,12 @@ public class LevelOneView extends AnchorPane implements Initializable,LevelOneCo
 
     @Override
     public void showDefeatAlert() {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Perdiste, ¿ Quieres iniciar un nuevo juego ?", ButtonType.YES, ButtonType.NO);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "¿ Quieres iniciar un nuevo juego ?", ButtonType.YES, ButtonType.NO);
+        alert.setTitle("¡Perdiste!");
+        alert.setHeaderText("¡Perdiste, sigue practicando!");
+        Image image = new Image(getClass().getResource("/resources/img/triste.jpg").toExternalForm());
+        ImageView imageView = new ImageView(image);
+        alert.setGraphic(imageView);
         alert.showAndWait();
         application.game_number++;
         if (alert.getResult() == ButtonType.YES) {
