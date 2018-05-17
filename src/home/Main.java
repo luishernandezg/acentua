@@ -9,6 +9,7 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import menu.MenuView;
@@ -30,6 +31,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        primaryStage.getIcons().add(new Image("/resources/img/pencil.png"));
         primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(createContent()));
         primaryStage.show();

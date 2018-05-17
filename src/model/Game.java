@@ -103,7 +103,7 @@ public class Game {
                 ,"París"
                 ,"máquina"
                 ,"matemáticas"
-                ,"cámion"
+                ,"camión"
                 ,"código"
                 ,"sílaba"
                 ,"bárbaro"
